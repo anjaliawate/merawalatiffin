@@ -1,0 +1,31 @@
+/* Empty. Add your own CSS if you like */
+
+
+/*.scroll-content{
+    background: url("../img/ionic.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+
+}
+*/
+
+/*html {
+    background: url("../img/ionic.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}*/
+
+.login{
+	width:310px;
+	margin-left: 230px;
+}
+
+.order{
+        width: 490px;
+        margin-top: 50px;
+}
+
+.offers{width: 420px;float: right;margin-right: 45px;margin-top:-83px;background: rgba(61, 35, 20, 0.63);border-radius: 30px;padding: 10px;}
