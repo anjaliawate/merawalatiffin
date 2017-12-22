@@ -31,6 +31,10 @@ angular.module('merawalatiffin.controllers', [])
     console.log("login data ",$scope.loginData);
   };
 
+ $scope.order = function() {
+   window.location.href = "http://localhost:8100/#/app/order";
+   console.log("login data ",$scope.loginData);
+  };
   // Perform the login action when the user submits the login form
   $scope.doLogin = function() {
     console.log('Doing login', $scope.loginData);

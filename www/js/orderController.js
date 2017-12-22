@@ -17,6 +17,7 @@ angular.module('merawalatiffin.controllers', [])
   $ionicModal.fromTemplateUrl('templates/order.html', {
     scope: $scope
   }).then(function(modal) {
+    console.log("order controller");
     $scope.modal = modal;
   });
 

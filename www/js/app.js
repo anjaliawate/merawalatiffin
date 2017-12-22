@@ -29,7 +29,7 @@ angular.module('merawalatiffin', ['ionic', 'merawalatiffin.controllers'])
 
     .state('app', {
     url: '/app',
-    abstract: true,
+    // abstract: true,
     templateUrl: 'templates/leftMenu.html',
     controller: 'AppCtrl'
   })
@@ -38,7 +38,8 @@ angular.module('merawalatiffin', ['ionic', 'merawalatiffin.controllers'])
     url: '/order',
     views: {
       'menuContent': {
-        templateUrl: 'templates/order.html'
+        templateUrl: 'templates/order.html',
+        controller: 'OrderCtrl'
       }
     }
   })
@@ -89,7 +90,19 @@ angular.module('merawalatiffin', ['ionic', 'merawalatiffin.controllers'])
         controller: 'PlaylistCtrl'
       }
     }
-  });
+    
+  })
+
+  .state('app.thanks', {
+    url: '/thanks',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/thanks.html',
+        //controller: 'PlaylistCtrl'
+      }
+    }
+    
+  })
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/playlists');

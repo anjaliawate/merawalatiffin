@@ -1,27 +1,41 @@
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Aguafina+Script" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 <ion-pane ng-controller="MenuCtrl">
-    <ion-view view-title="Menu">
-      <ion-conten>
-            <div class="col-sm-12 menu-base no-padding">
-                    <div class="col-sm-4 menu-block animate-in move-up animated" id="menu1">
+    <ion-view view-title="Menu" style="background-color: #DAF7A6;">
+      <ion-conten class="leftmenu-background" >
+            <!-- START Section Heading -->
+            <div class="wow fadeInDown" data-wow-duration="2s" data-wow-offset="250">
+                <header class="section-heading">
+                    <h2 class="section-heading-title" style="margin-top: 50px; margin-left: 20px;">Our Menu</h2>
+                    <div class="section-heading-subtitle-container tilt-left">
+                        <h4 class="section-heading-subtitle" style="margin-left: 175px;">Feeling Hungry?</h4>
+                    </div>
+                </header>
+            </div>
+        <!-- END Section Heading -->
+            <div class="row menu-base no-padding" style= "overflow-y: scroll; height: 500px; margin-top: -140px;">
+                    <div class="col-sm-4 menu-block animate-in move-up animated" id="menu1" style = "margin-left: 20px; margin-top: 60px;">
                         <div class="menu-item">
-                            <div class="menu-image">
-                                <img src="images/assets/slide-image-01.jpg" width="358" height="275" style="margin-left: 20px; margin-top: 60px;">
+                            <div>
+                                <img src="images/assets/slide-image-01.jpg" width="358" height="275">
                                 <div class="price">Rs 75</div>
                             </div>
                             <div class="menu-text">
                                 <h3>Chota Wala Tiffin</h3>
                                 <p>4 Roti with good quantity of Vegetable</p>
                                 <p>Rs 75/- For Daily Including Delivery Charges</p>
-                                <div class="order-btn" style="margin-top: 15%;">
+                                <div class="order-btn">
                                 <a href="#" data-toggle="modal" data-target="#enquiry-modal" class="hungry-button dark">Enquiry</a>
-                                <a href="http://merawalatiffin.com/store/index.html" class="hungry-button dark">Order Now</a>
+                                <a href="#/app/order" class="hungry-button dark">Order Now</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4 menu-block animate-in move-up animated" id="menu2">
+                    <div class="col-sm-4 menu-block animate-in move-up animated" id="menu2" style = "margin-left: 20px; margin-top: 60px;">
                         <div class="menu-item">
-                            <div class="menu-image">
+                            <div>
                                <img src="images/assets/slide-image-01.jpg" width="358" height="275">
                                 <div class="price">Rs 95</div>
                             </div>
@@ -31,14 +45,14 @@
                                 <p>Rs 95 /- For Daily Including Delivery Charges</p>
                                 <div class="order-btn">
                                 <a href="#" data-toggle="modal" data-target="#enquiry-modal" class="hungry-button dark">Enquiry</a>
-                                <a href="http://merawalatiffin.com/store/index.html" class="hungry-button dark">Order Now</a>
+                                <a href="#/app/order" class="hungry-button dark">Order Now</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4 menu-block animate-in move-up animated" id="menu3">
+                    <div class="col-sm-4 menu-block animate-in move-up animated" id="menu3" style = "margin-left: 20px; margin-top: 60px;">
                         <div class="menu-item">
-                            <div class="menu-image">
+                            <div>
                                 <img src="images/assets/slide-image-01.jpg" width="358" height="275">
                                 <div class="price">Rs 125</div>
                             </div>
@@ -48,12 +62,30 @@
                                 <p>Rs 125 /- For Daily Including Delivery Charges</p>
                                 <div class="order-btn">
                                 <a href="#" data-toggle="modal" data-target="#enquiry-modal" class="hungry-button dark">Enquiry</a>
-                                <a href="http://merawalatiffin.com/store/index.html" class="hungry-button dark">Order Now</a>
+                                <a href="#/app/order" class="hungry-button dark">Order Now</a>
                                 </div>
                             </div>
                         </div>
                     </div>
             </div>
+            <div class="modal fade" id="enquiry-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+          <div class="modal-dialog">
+                <div class="loginmodal-container">
+                    <h1>Enquiry Form</h1><br>
+                  <form method="post" action="contact.php">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="text" name="email" placeholder="Your Email" required>
+                    <input type="text" name="phone" placeholder="Contact Number" required>
+                    <select name="meal" class="form-control required">
+                                        <option value="" disabled selected>Select Your Meal</option>                                        
+                                        <option value="Chota Wala Tiffin">Chota Wala Tiffin</option><option value="Bada Wala Tiffin">Bada Wala Tiffin</option><option value="Non-Veg Wala Tiffin">Non-Veg Wala Tiffin</option>                                    </select>
+                    <textarea name="msg" cols="8" rows="8" placeholder="Your Message"></textarea>
+                    <input type="submit" name="login" class="login loginmodal-submit" value="Submit">
+                  </form>
+                    
+                </div>
+            </div>
+          </div>
         </ion-content>
     </ion-view>
 </ion-pane>

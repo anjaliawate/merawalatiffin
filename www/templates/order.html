@@ -1,30 +1,44 @@
+
+
 <ion-pane ng-controller="OrderCtrl">
-	<ion-view view-title="Order">
-	  <ion-conten>
-	    <form ng-submit="order()" style='margin-left: 360px;'>
-	      <div class="order">
-	        <label class="item item-input">
-	          <span class="input-label">Your Name</span>
-	          <input type="text" ng-model="orderData.username">
-	        </label>
-	        <label class="item item-input">
-	          <span class="input-label">Email</span>
-	          <input type="text" ng-model="orderData.email">
-	        </label>
-	        <label class="item item-input">
-	          <span class="input-label">Contact No.</span>
-	          <input type="text" ng-model="orderData.mobile">
-	        </label>
-	        <label class="item item-input">
-	          <span class="input-label">Message</span>
-	          <input type="text" ng-model="orderData.message">
-	        </label>
-	        <label class="item">
-	          <button class="button button-block button-positive" type="submit">Order Now</button>
-	          
-	        </label>
-	      </div>
-	    </form>
+	<ion-view view-title="Order" >
+	  <ion-content style="background-color: #DAF7A6;">
+	  	<!-- START Slider Texts -->
+		
+	
+		
+		<div class="row">
+      
+      <!-- Images -->
+        <div class="col-sm-4 grid-container">
+		
+			<!-- START Site Logo -->
+			
+			  
+			<img src="../images/assets/everyday-lunch-menu.jpg" alt="Slide Image 01" class="img-responsive" style="width: 1350px;"/>
+		
+			<div class="offers">
+			    <h2 style="color:#fff; background-color: #808080;min-height: 60px;border-radius: 6px" align="center" >For Offers & Discounts</h2>
+				<form method="post" action="contact.php" class="form-group" 
+				style="background-color: #808080; margin-top: -10px;border-radius: 6px  ">
+				  <div style="margin-top:10px;height: 359px;">
+					<input type="text" name="name" placeholder="Your Name" required style="margin-bottom: 10px;margin-left: 10px;width: 360px; border-radius: 6px">
+					<input type="text" name="email" placeholder="Your Email" required style="margin-bottom: 10px;margin-left: 10px;width: 360px; border-radius: 6px">
+					<input type="text" name="phone" placeholder="Contact Number" maxlength="10" required style="margin-bottom: 10px;margin-left: 10px;width: 360px; border-radius: 6px">
+					<textarea name="msg" cols="12" rows="12" class="form-msg" placeholder="Your Message"></textarea style="margin-bottom: 10px; margin-left: 10px; width: 360px; border-radius: 6px" >
+					<a href= "#/app/thanks">
+					<input type="submit" name="login" align="center" class="login loginmodal-submit" value="Submit" >
+					</a>
+				   </div>
+				  </form>
+				
+		</div>
+		
+			
+		</div>
+      </div>
+      
+     </div>
 	  </ion-content>
 	</ion-view>
 </ion-pane>
